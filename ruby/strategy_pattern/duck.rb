@@ -5,7 +5,8 @@ require_relative 'fly_behavior'
 # Proves that if it quacks like a duck and flies like a duck
 # then it must be a duck!
 class Duck
-  attr_reader :quack_behavior, :fly_behavior
+  attr_accessor :quack_behavior, :fly_behavior
+
   def initialize(quack_behavior, fly_behavior)
     @fly_behavior = fly_behavior
     @quack_behavior = quack_behavior
