@@ -6,21 +6,18 @@
 #define STRATEGY_PATTERN_DUCK_H
 
 
-#include <ostream>
+#include <iostream>
 
 #include "FlyBehavior.h"
 #include "QuackBehavior.h"
 
 class Duck {
-private:
-    FlyBehavior& flyBehavior;
-    QuackBehavior& quackBehavior;
-
 public:
     /**
      * Default constructor
      */
-    Duck(FlyBehavior &flyBehavior, QuackBehavior &quackBehavior);
+    Duck(FlyBehavior *flyBehavior, QuackBehavior *quackBehavior);
+    ~Duck() {};
 
     /**
      * Standard display method for outputting details about a Duck
@@ -35,15 +32,26 @@ public:
     std::string fly();
 
     /**
-     * Return a string interpretaion of how this duck quacks
+     * Return a string implementation of how this duck quacks
      * @return
      */
     std::string quack();
 
-    void setFlyBehavior(FlyBehavior &flyBehavior);
+    /**
+     * Sets the type of flying this duck does
+     * @param flyBehavior
+     */
+    void setFlyBehavior(FlyBehavior *flyBehavior);
 
-    void setQuackBehavior(QuackBehavior &quackBehavior);
+    /**
+     * Sets how this duck quacks
+     * @param quackBehavior
+     */
+    void setQuackBehavior(QuackBehavior *quackBehavior);
 
+protected:
+    FlyBehavior *flyBehavior;
+    QuackBehavior *quackBehavior;
 };
 
 /**

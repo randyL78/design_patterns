@@ -5,20 +5,23 @@
 
 #include "Duck.h"
 #include "FlyWithWings.h"
-#include "Quack.h"
+#include "Quacker.h"
 #include "Squeak.h"
 
 using namespace std;
 int main() {
-    FlyWithWings flier = FlyWithWings();
-    Quack quack = Quack();
-    Squeak squeak = Squeak();
-    Duck duck = Duck(flier, squeak);
-    duck.setFlyBehavior(flier);
+    FlyBehavior *flier = new FlyWithWings();
+    QuackBehavior *quack = new Quacker();
+    QuackBehavior *squeak = new Squeak();
+
+    Duck duck = Duck(flier, quack);
     cout << duck << endl;
     cout << duck.fly() << endl;
     cout << duck.quack() << endl;
-    duck.setQuackBehavior(quack);
+
+    duck.setQuackBehavior(squeak);
+    cout << duck.quack() << endl;
+
 
     return 0;
 }

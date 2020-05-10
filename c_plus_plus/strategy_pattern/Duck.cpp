@@ -3,9 +3,8 @@
 //
 
 #include "Duck.h"
-#include "FlyWithWings.h"
 
-Duck::Duck(FlyBehavior &flyBehavior, QuackBehavior &quackBehavior)
+Duck::Duck(FlyBehavior *flyBehavior, QuackBehavior *quackBehavior)
     : flyBehavior(flyBehavior), quackBehavior(quackBehavior) {
 }
 
@@ -15,21 +14,19 @@ void Duck::display(std::ostream &outs) const {
 }
 
 std::string Duck::fly() {
-    return flyBehavior.fly();
+    return flyBehavior->fly();
 }
 
 std::string Duck::quack() {
-    return quackBehavior.quack();
+    return quackBehavior->quack();
 }
 
-void Duck::setFlyBehavior(FlyBehavior &flyBehavior) {
+void Duck::setFlyBehavior(FlyBehavior *flyBehavior) {
     this->flyBehavior = flyBehavior;
 }
 
-void Duck::setQuackBehavior(QuackBehavior &quackBehavior) {
-    std::cout << quackBehavior.quack();
+void Duck::setQuackBehavior(QuackBehavior *quackBehavior) {
     this->quackBehavior = quackBehavior;
-    std::cout << this->quackBehavior.quack();
 }
 
 std::ostream &operator<<(std::ostream &outs, const Duck &duck) {

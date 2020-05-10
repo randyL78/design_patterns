@@ -10,6 +10,7 @@
 
 class Squeak: public QuackBehavior {
 public:
+    Squeak() {};
     std::string quack() override;
 };
 

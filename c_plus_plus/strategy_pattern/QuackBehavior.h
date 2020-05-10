@@ -9,13 +9,7 @@
 
 class QuackBehavior {
 public:
-    QuackBehavior();
     virtual std::string quack() = 0;
 };
-
-QuackBehavior::QuackBehavior() {
-
-}
-
 
 #endif //STRATEGY_PATTERN_QUACKBEHAVIOR_H
