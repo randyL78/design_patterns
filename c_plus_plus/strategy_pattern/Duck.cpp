@@ -3,19 +3,33 @@
 //
 
 #include "Duck.h"
+#include "FlyWithWings.h"
 
-Duck::Duck() {}
+Duck::Duck(FlyBehavior &flyBehavior, QuackBehavior &quackBehavior)
+    : flyBehavior(flyBehavior), quackBehavior(quackBehavior) {
+}
+
 
 void Duck::display(std::ostream &outs) const {
     outs << "I'm a generic duck.";
 }
 
 std::string Duck::fly() {
-    return "I'm flying!";
+    return flyBehavior.fly();
 }
 
 std::string Duck::quack() {
-    return "Quack quack!";
+    return quackBehavior.quack();
+}
+
+void Duck::setFlyBehavior(FlyBehavior &flyBehavior) {
+    this->flyBehavior = flyBehavior;
+}
+
+void Duck::setQuackBehavior(QuackBehavior &quackBehavior) {
+    std::cout << quackBehavior.quack();
+    this->quackBehavior = quackBehavior;
+    std::cout << this->quackBehavior.quack();
 }
 
 std::ostream &operator<<(std::ostream &outs, const Duck &duck) {

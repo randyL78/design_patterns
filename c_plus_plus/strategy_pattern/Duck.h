@@ -8,12 +8,19 @@
 
 #include <ostream>
 
+#include "FlyBehavior.h"
+#include "QuackBehavior.h"
+
 class Duck {
+private:
+    FlyBehavior& flyBehavior;
+    QuackBehavior& quackBehavior;
+
 public:
     /**
      * Default constructor
      */
-    Duck();
+    Duck(FlyBehavior &flyBehavior, QuackBehavior &quackBehavior);
 
     /**
      * Standard display method for outputting details about a Duck
@@ -32,6 +39,10 @@ public:
      * @return
      */
     std::string quack();
+
+    void setFlyBehavior(FlyBehavior &flyBehavior);
+
+    void setQuackBehavior(QuackBehavior &quackBehavior);
 
 };
 
