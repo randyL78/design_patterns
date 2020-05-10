@@ -1,3 +1,5 @@
+package com.randylayne.designpatterns.strategy;
+
 public class RubberDuck extends Duck {
    public RubberDuck() {
       quackBehavior = new Squeak();

@@ -1,17 +1,17 @@
 # frozen_string_literal: true
-module QuackBehavior
+module com.randylayne.designpatterns.strategy.QuackBehavior
   # Implements different versions of the quack method
-  class Quack
+  class com.randylayne.designpatterns.strategy.Quack
     def self.quack
-      puts 'Quack quack!'
+      puts 'com.randylayne.designpatterns.strategy.Quack quack!'
     end
   end
-  class Squeak
+  class com.randylayne.designpatterns.strategy.Squeak
     def self.quack
-      puts 'Squeak!'
+      puts 'com.randylayne.designpatterns.strategy.Squeak!'
     end
   end
-  class MuteQuack
+  class com.randylayne.designpatterns.strategy.MuteQuack
     def self.quack
       puts '<< Silence >>'
     end

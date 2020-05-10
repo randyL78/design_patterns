@@ -2,9 +2,9 @@
 
 require_relative 'duck'
 # A fun duck shaped bathtub toy
-class RubberDuck < Duck
+class com.randylayne.designpatterns.strategy.RubberDuck < com.randylayne.designpatterns.strategy.Duck
   def initialize
-    super(QuackBehavior::Squeak, FlyBehavior::NoFly)
+    super(com.randylayne.designpatterns.strategy.QuackBehavior::com.randylayne.designpatterns.strategy.Squeak, com.randylayne.designpatterns.strategy.FlyBehavior::NoFly)
   end
 
   def display
