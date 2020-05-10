@@ -4,4 +4,4 @@ Following the examples from _Head First Design Patterns_. Implementing each patt
 
 ## Strategy pattern
 
-The Strategy Pattern or Policy Pattern is a way of implementing a family of algorithms that can be selected at runtime and are interchangeable. It is a way of encapsulating behavior from the clients that use it. Use this pattern when a behavior has multiple implementations between sub classes, but not each sub class's implementation is unique. Ie... there may be 3 sub classes that handle the behavior one way and another 2 sub classes that handle it another way.
+The Strategy Pattern or Policy Pattern is a way of implementing a family of algorithms that can be selected at runtime and are interchangeable. It is a way of encapsulating behavior from the clients that use it. Use this pattern when a behavior has multiple implementations, and you want to choose which one an object uses at runtime.
