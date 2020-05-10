@@ -1,8 +1,8 @@
 # frozen_string_literal: true
-module com.randylayne.designpatterns.strategy.FlyBehavior
+module FlyBehavior
 
   # Implements different versions of the fly method
-  class com.randylayne.designpatterns.strategy.FlyWithWings
+  class FlyWithWings
     def self.fly
       puts "I'm flying!"
     end

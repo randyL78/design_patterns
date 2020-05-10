@@ -2,9 +2,9 @@
 
 require_relative 'duck'
 # A specific type of normal flying quacking duck
-class com.randylayne.designpatterns.strategy.MallardDuck < com.randylayne.designpatterns.strategy.Duck
+class MallardDuck < Duck
   def initialize
-    super(com.randylayne.designpatterns.strategy.QuackBehavior::com.randylayne.designpatterns.strategy.Quack, com.randylayne.designpatterns.strategy.FlyBehavior::com.randylayne.designpatterns.strategy.FlyWithWings)
+    super(QuackBehavior::Quack, FlyBehavior::FlyWithWings)
   end
 
   def display

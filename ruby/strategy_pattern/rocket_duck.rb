@@ -2,9 +2,9 @@
 
 require_relative 'duck'
 # A model rocket shaped like a duck
-class com.randylayne.designpatterns.strategy.RocketDuck < com.randylayne.designpatterns.strategy.Duck
+class RocketDuck < Duck
   def initialize
-    super(com.randylayne.designpatterns.strategy.QuackBehavior::com.randylayne.designpatterns.strategy.MuteQuack, com.randylayne.designpatterns.strategy.FlyBehavior::RocketPowered)
+    super(QuackBehavior::MuteQuack, FlyBehavior::RocketPowered)
   end
 
   def display
