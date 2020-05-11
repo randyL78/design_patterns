@@ -3,6 +3,15 @@
 //
 
 #include "Duck.h"
+#include "FlyWithWings.h"
+#include "Quacker.h"
+
+Duck::Duck() {
+    FlyBehavior *f = new FlyWithWings();
+    QuackBehavior *q = new Quacker();
+    this->flyBehavior = f;
+    this->quackBehavior = q;
+}
 
 Duck::Duck(FlyBehavior *flyBehavior, QuackBehavior *quackBehavior)
     : flyBehavior(flyBehavior), quackBehavior(quackBehavior) {

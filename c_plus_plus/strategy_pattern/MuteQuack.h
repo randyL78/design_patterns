@@ -9,6 +9,7 @@
 #include "QuackBehavior.h"
 
 class MuteQuack : public QuackBehavior {
+public:
     MuteQuack() {};
     std::string quack() override;
 };

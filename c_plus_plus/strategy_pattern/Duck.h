@@ -12,18 +12,19 @@
 #include "QuackBehavior.h"
 
 class Duck {
-public:
+protected:
     /**
-     * Default constructor
-     */
+    * Default constructor
+    */
+    Duck();
     Duck(FlyBehavior *flyBehavior, QuackBehavior *quackBehavior);
     ~Duck() {};
-
+public:
     /**
      * Standard display method for outputting details about a Duck
      * @param outs
      */
-    void display(std::ostream &outs) const;
+    virtual void display(std::ostream &outs) const;
 
     /**
      * Return a string interpretation of how this duck flies
